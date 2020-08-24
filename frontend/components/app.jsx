@@ -1,18 +1,18 @@
 import React from "react";
-import GreetingContainer from "./greeting/greeting_container";
 import {Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
-import SigninFormContainer from "./session_form/signin_form_container";
-import SignupFormContainer from "./session_form/signup_form_container";
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import signinFormContainer from "./user_auth/signin_form_container";
+import signupFormContainer from "./user_auth/signup_form_container";
+import FrontPageContainer from "./front_page/front_page_container";
 
 const App = () => (
     <div>
-        <header>
-            <h1>Taut</h1>
-            <GreetingContainer />
-        </header>
-    
-        <Route path="/signin" component={SigninFormContainer} />
-        <Route path="/signup" component={SignupFormContainer} />
+        <Switch>
+            <AuthRoute exact path="/signin" component={signinFormContainer} />
+            <AuthRoute exact path="/signup" component={signupFormContainer} />
+            <Route exact path="/" component={FrontPageContainer} />
+            <Redirect to="/" />
+        </Switch>
     </div>
 );
 
