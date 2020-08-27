@@ -1,0 +1,121 @@
+.front-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+}
+
+.front-page .navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 2;
+    background-color: white;
+    border-bottom: 1px solid tan;
+}
+
+.front-page .navbar li {
+    list-style-type: none;
+}
+
+.front-page .logo-box {
+    display: flex;
+    width: 300px;
+    position: relative;
+}
+
+.front-page .logo {
+    height: 30px;
+    width: 30px;
+    top: 50%;
+}
+
+.front-page .title {
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    position: flex;
+    top: 50%;
+    margin-left: 3px;
+}
+
+.front-page .frontpage-link, .links {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.front-page .frontpage-link {
+    display: flex;
+    float: left;
+    margin-left: 270px;
+    height: 50px;
+}
+
+.front-page .links {
+    padding: 25px 40px 25px 15px;
+    display: flex;
+    float: right;
+    font-weight: 400;
+    margin-right: 350px;
+    top: 50%;
+}
+
+.front-page .signin-link a {
+    padding: 12px 15px 12px 15px;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 4px;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline;
+}
+
+.front-page .signup-link a {
+    padding: 12px 15px 12px 15px;
+    color: white;
+    background-color: #6f4974;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 4px;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline;
+}
+
+.front-page .links a:hover {
+    background-color: #400d40;
+    transition: .3s;
+}
+
+.front-page .main-content{
+    margin-top: 200px;
+}
+
+.front-page .main-content h1 {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    top: 100px;
+    width: 100%;
+    letter-spacing: 1px;
+    align-items: center;
+    text-align: center;
+}
+  
+.front-page .main-content p {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    font-weight: 200;
+    align-items: center;
+    text-align: center;
+}

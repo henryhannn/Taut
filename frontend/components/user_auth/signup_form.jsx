@@ -10,6 +10,7 @@ class SignupForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     update(field) {
@@ -20,6 +21,11 @@ class SignupForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+    }
+    
+    handleDemo(e) {
+        e.preventDefault();
+        this.props.signInForm({ email: "DemoUser@Demo.com", password: "demouser" });
     }
 
     componentDidMount() {
@@ -43,7 +49,7 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div className="signup-form-container">
-                <Link className="frontpage_link" to="/" onClick={this.props.clearSigninErrors}>
+                <Link className="frontpage-link" to="/" onClick={this.props.clearSigninErrors}>
                     <ul className="logo-box">
                         <li><img src={window.logo} alt="Taut Logo" className="logo" /></li>
                         <li className="title">taut</li>
@@ -51,51 +57,56 @@ class SignupForm extends React.Component {
                 </Link>
 
                 <br/>
+                <div className="main-content">
+                    <h1>Sign up for taut</h1>
+                    <p>Enter your email address, full name and password.</p>
 
-                <h1>Sign up for taut</h1>
-                <p>Enter your email address, full name and password.</p>
+                    <div className="error-container">{this.renderErrors()}</div>
 
-                <div className="error-container">{this.renderErrors()}</div>
-
-                <form onSubmit={this.handleSubmit} className="signup-form-box">
-                    <div className="signup-form">
-                        <li className="email-box">
-                            <input id="email"
-                                type="text"
-                                placeholder="you@email.com"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                className="signup-input"
-                            />
-                        </li>
-                        <br/>
-                        <li className="password-box">
-                            <input type="password"
-                                placeholder="email"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="signup-input"
-                            />
-                        </li>
-                        <br/>
-                        <li className="password-box">
-                            <input type="password"
-                                placeholder="email"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="signup-input"
-                            />
-                        </li>
-                        <br/>
-                        <li className="submit">
-                            <button>Sign up</button>
-                        </li>
-                        <br/>
-                        <li className="demouser">
-                            <button onClick={this.handleDemo}>Demo user</button>
-                        </li>
-                    </div>
-                </form>
+                    <form onSubmit={this.handleSubmit} className="signup-form-box">
+                        <div className="signup-form">
+                            <li className="email-box">
+                                <input id="email"
+                                    type="text"
+                                    placeholder="you@email.com"
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                    className="signup-input"
+                                />
+                            </li>
+                            <br/>
+                            <li className="fullname-box">
+                                <input type="text"
+                                    placeholder="your name"
+                                    value={this.state.full_name}
+                                    onChange={this.update('full_name')}
+                                    className="signup-input"
+                                />
+                            </li>
+                            <br/>
+                            <li className="password-box">
+                                <input type="password"
+                                    placeholder="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    className="signup-input"
+                                />
+                            </li>
+                            <br/>
+                            <li className="submit">
+                                <button>Sign up</button>
+                            </li>
+                            <br/>
+                        </div>
+                    </form>
+                    <form>
+                        <div>
+                            <li className="demouser">
+                                <button onClick={this.handleDemo}>Demo user</button>
+                            </li>
+                        </div>
+                    </form>
+                </div>
             </div>
         );
     }

@@ -48,50 +48,55 @@ class SigninForm extends React.Component {
     render() {
         return (
             <div className="signin-form-container">
-                <Link className="frontpage_link" to="/" onClick={this.props.clearSigninErrors}>
-                    <ul className="logo-box">
+                <ul className="logo-box">
+                    <Link className="frontpage-link" to="/" onClick={this.props.clearSigninErrors}>
                         <li><img src={window.logo} alt="Taut Logo" className="logo" /></li>
                         <li className="title">taut</li>
-                    </ul>
-                </Link>
+                    </Link>
+                </ul>
 
                 <br/>
+                <div className="main-content">
+                    <h1>Sign in to your workspace</h1>
+                    <p>Enter your email address and password.</p>
 
-                <h1>Sign in to you workspace</h1>
-                <p>Enter your email address and password.</p>
+                    <div className="error-container">{this.renderErrors()}</div>
 
-                <div className="error-container">{this.renderErrors()}</div>
-
-                <form onSubmit={this.handleSubmit} className="signin-form-box">
-                    <div className="signin-form">
-                        <li className="email-box">
-                            <input id="email"
-                                type="text"
-                                placeholder="you@email.com"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                className="signin-input"
-                            />
-                        </li>
-                        <br/>
-                        <li className="password-box">
-                            <input type="password"
-                                placeholder="email"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="signin-input"
-                            />
-                        </li>
-                        <br/>
-                        <li className="submit">
-                            <button>Sign in</button>
-                        </li>
-                        <br/>
-                        <li className="demouser">
-                            <button onClick={this.handleDemo}>Demo user</button>
-                        </li>
-                    </div>
-                </form>
+                    <form onSubmit={this.handleSubmit} className="signin-form-box">
+                        <div className="signin-form">
+                            <li className="email-box">
+                                <input id="email"
+                                    type="text"
+                                    placeholder="you@email.com"
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                    className="signin-input"
+                                />
+                            </li>
+                            <br/>
+                            <li className="password-box">
+                                <input type="password"
+                                    placeholder="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    className="signin-input"
+                                />
+                            </li>
+                            <br/>
+                            <li className="submit">
+                                <button>Sign in</button>
+                            </li>
+                            <br/>
+                        </div>
+                    </form>
+                    <form>
+                        <div>
+                            <li className="demouser">
+                                <button onClick={this.handleDemo}>Demo user</button>
+                            </li>
+                        </div>
+                    </form>
+                </div>
             </div>
         );
     }
