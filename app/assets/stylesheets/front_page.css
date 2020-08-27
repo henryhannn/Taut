@@ -4,7 +4,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: beige;
+    background: linear-gradient(
+        to bottom,
+        rgb(245, 245, 227) 0%,
+        rgb(245, 245, 227) 70%,
+        rgb(219, 208, 218) 70%,
+        rgb(219, 208, 218) 100%
+    );
 }
 
 .front-page .navbar {
@@ -15,27 +21,25 @@
     width: 100%;
     height: 70px;
     z-index: 2;
-    background-color: white;
-    border-bottom: 1px solid tan;
+    background-color: #F6EFE8;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
 }
 
 .front-page .navbar li {
     list-style-type: none;
 }
 
-.front-page .logo-box {
-    display: flex;
-    width: 300px;
-    position: relative;
-}
-
-.front-page .logo {
+.front-page .navbar .logo {
     height: 30px;
     width: 30px;
     top: 50%;
 }
 
-.front-page .title {
+.front-page .navbar .title {
     font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
     font-size: 30px;
     font-weight: 700;
@@ -45,16 +49,23 @@
     margin-left: 3px;
 }
 
-.front-page .frontpage-link, .links {
+.front-page .navbar .frontpage-link {
     text-decoration: none;
     list-style-type: none;
+    margin-left: 15%;
+    float: left;
+    height: 50px;
 }
 
-.front-page .frontpage-link {
+.front-page .navbar .frontpage-link > li {
+    display: inline-block;
+}
+
+.front-page .logo-box {
     display: flex;
-    float: left;
-    margin-left: 270px;
-    height: 50px;
+    width: 100px;
+    height: 20px;
+    position: relative;
 }
 
 .front-page .links {
@@ -97,25 +108,50 @@
 }
 
 .front-page .main-content{
-    margin-top: 200px;
+    margin-top: 8%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
-.front-page .main-content h1 {
+.front-page .main-content > h1 {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    top: 100px;
+    width: 100%;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 4%;
+    color: rgb(126, 126, 126);
+}
+
+.front-page .main-content .section-1 {
+    display: flex;
+}
+
+.front-page .main-content .section-1 video {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+}
+
+.front-page .main-content .section-1 .section-1-text {
+    margin-left: 3%;
+    display: inline-block;
+}
+
+.front-page .main-content .section-1 .section-1-text > h1 {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 60px;
     top: 100px;
     width: 100%;
     letter-spacing: 1px;
-    align-items: center;
-    text-align: center;
+    text-align: left;
 }
-  
-.front-page .main-content p {
-    display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    font-weight: 200;
-    align-items: center;
-    text-align: center;
+
+.front-page .main-content .section-1 .section-1-text > p {
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-size: 20px;
 }

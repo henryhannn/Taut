@@ -86,7 +86,6 @@ class SigninForm extends React.Component {
                             <li className="submit">
                                 <button>Sign in</button>
                             </li>
-                            <br/>
                         </div>
                     </form>
                     <form>

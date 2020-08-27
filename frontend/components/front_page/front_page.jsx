@@ -27,7 +27,15 @@ class FrontPage extends React.Component {
                 </ul>
                 <section className="main-content">
                     <h1>Taut is where work happens</h1>
-                    <p>testinggggggggg</p>
+                    <div className="section-1">
+                        <video autoPlay muted loop>
+                            <source src="https://a.slack-edge.com/5f6f2/marketing/img/homepage/hp-prospect/channels/bring-your-team-together-in-channels.mp4"></source>
+                        </video>
+                        <div className="section-1-text">
+                            <h1>Bring your team together in channels</h1>
+                            <p>A channel is the place for everything related to a project, topic or team. Everyone in a channel sees the same messages and stays on the same page.</p>
+                        </div>
+                    </div>
                 </section>
             </div>
         )

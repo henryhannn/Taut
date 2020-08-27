@@ -49,12 +49,12 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div className="signup-form-container">
-                <Link className="frontpage-link" to="/" onClick={this.props.clearSigninErrors}>
-                    <ul className="logo-box">
+                <ul className="logo-box">
+                    <Link className="frontpage-link" to="/" onClick={this.props.clearSigninErrors}>
                         <li><img src={window.logo} alt="Taut Logo" className="logo" /></li>
                         <li className="title">taut</li>
-                    </ul>
-                </Link>
+                    </Link>
+                </ul>
 
                 <br/>
                 <div className="main-content">
@@ -96,7 +96,6 @@ class SignupForm extends React.Component {
                             <li className="submit">
                                 <button>Sign up</button>
                             </li>
-                            <br/>
                         </div>
                     </form>
                     <form>

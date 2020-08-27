@@ -1,5 +1,5 @@
 body {
-    background-color: beige;
+    background-color: rgb(245, 245, 227);
 }
 
 .signup-form-container {
@@ -99,4 +99,10 @@ body {
     font-weight: 600;
     font-size: 15px;
     display: inline;
+}
+
+.signup-form-container .main-content button:hover {
+    cursor: pointer;
+    background-color: #400d40;
+    transition: .2s;
 }
