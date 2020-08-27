@@ -1,14 +1,11 @@
 .front-page {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(
         to bottom,
         rgb(245, 245, 227) 0%,
-        rgb(245, 245, 227) 70%,
-        rgb(219, 208, 218) 70%,
+        rgb(245, 245, 227) 65%,
+        rgb(219, 208, 218) 65%,
         rgb(219, 208, 218) 100%
     );
 }
@@ -33,13 +30,15 @@
     list-style-type: none;
 }
 
-.front-page .navbar .logo {
+.front-page .navbar .logo-box .logo {
+    display: inline-block
     height: 30px;
     width: 30px;
     top: 50%;
 }
 
-.front-page .navbar .title {
+.front-page .navbar .logo-box .title {
+    display: inline-block;
     font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
     font-size: 30px;
     font-weight: 700;
@@ -50,22 +49,18 @@
 }
 
 .front-page .navbar .frontpage-link {
-    text-decoration: none;
-    list-style-type: none;
+    padding: 25px 40px 25px 15px;
+    display: flex;
+    float: right;
+    font-weight: 400;
     margin-left: 15%;
-    float: left;
-    height: 50px;
-}
-
-.front-page .navbar .frontpage-link > li {
-    display: inline-block;
+    top: 50%;
 }
 
 .front-page .logo-box {
     display: flex;
     width: 100px;
-    height: 20px;
-    position: relative;
+    height: 50px;
 }
 
 .front-page .links {
@@ -73,7 +68,7 @@
     display: flex;
     float: right;
     font-weight: 400;
-    margin-right: 350px;
+    margin-right: 15%;
     top: 50%;
 }
 
@@ -144,14 +139,16 @@
 .front-page .main-content .section-1 .section-1-text > h1 {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 60px;
+    font-size: 50px;
     top: 100px;
     width: 100%;
     letter-spacing: 1px;
     text-align: left;
+    font-weight: 600;
 }
 
 .front-page .main-content .section-1 .section-1-text > p {
+    margin-top: 30px;
     font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
     font-size: 20px;
 }

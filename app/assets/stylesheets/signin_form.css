@@ -40,18 +40,28 @@ body {
 
 .signin-form-container .main-content > h1 {
     font-weight: 700;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-size: 30px;
+    margin-top: 5%;
+    margin-bottom: 4%;
 }
 
 .signin-form-container .main-content > p {
     font-weight: 600;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-size: 17px;
+    margin-bottom: 5%;
 }
 
 .signin-form-container .error-container {
     color: red;
     font-size: 15px;
+    margin-bottom: 2%;
 }
 
 .signin-form-container input {
+    border: 2px solid purple;
+    border-radius: 4px;
     height: 25px;
     width: 40%;
     margin: 3px;
