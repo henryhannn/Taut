@@ -13,7 +13,7 @@
  *= require_self
  */
 
- @import "./reset.css";
- @import "./front_page.css";
- @import "./signin_form.css";
- @import "./signup_form.css";
+ @import "stylesheets/reset.css";
+ @import "stylesheets/front_page.css";
+ @import "stylesheets/signin_form.css";
+ @import "stylesheets/signup_form.css";
