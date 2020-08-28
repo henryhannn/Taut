@@ -36,6 +36,17 @@ class FrontPage extends React.Component {
                             <p>A channel is the place for everything related to a project, topic or team. Everyone in a channel sees the same messages and stays on the same page.</p>
                         </div>
                     </div>
+                    <div className="section-2">
+                        <div className="section-2-text">
+                            <h1>Over 0 companies use Taut to get work done</h1>
+                            <p>"Ideas and media are now able to be shared in near-real time through our social channels, thanks to Taut."</p>
+                            <p className="section-2-text-author">Henry</p>
+                            <p className="section-2-text-company">Henry Co., CEO, CFO, CTO </p>
+                        </div>
+                        <div className="section-2-image">
+                            <img src="https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop.png" srcset="https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop.png 1x, https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop@2x.png 2x" alt="Screenshot of the Slack app"></img>
+                        </div>
+                    </div>
                 </section>
             </div>
         )

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './header';
-import channelListContainer from './channel_list_container';
-import messageAreaContainer from './message_area_container';
+import ChannelListContainer from './channel_list_container';
+import MessageAreaContainer from './message_area_container';
 
 class MainPage extends React.Component {
     constructor(props) {
@@ -12,8 +12,8 @@ class MainPage extends React.Component {
         return (
             <div>
                 <Header logout={this.props.logout}/>
-                <channelListContainer/>
-                <messageAreaContainer/>
+                {/* <ChannelListContainer />
+                <MessageAreaContainer /> */}
             </div>
         )
     }

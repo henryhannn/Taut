@@ -4,8 +4,8 @@
     background: linear-gradient(
         to bottom,
         rgb(245, 245, 227) 0%,
-        rgb(245, 245, 227) 65%,
-        rgb(219, 208, 218) 65%,
+        rgb(245, 245, 227) 55%,
+        rgb(219, 208, 218) 55%,
         rgb(219, 208, 218) 100%
     );
 }
@@ -60,7 +60,8 @@
 .front-page .logo-box {
     display: flex;
     width: 100px;
-    height: 50px;
+    height: 30px;
+    align-self: center;
 }
 
 .front-page .links {
@@ -134,6 +135,7 @@
 .front-page .main-content .section-1 .section-1-text {
     margin-left: 3%;
     display: inline-block;
+    margin-right: 3%;
 }
 
 .front-page .main-content .section-1 .section-1-text > h1 {
@@ -151,4 +153,50 @@
     margin-top: 30px;
     font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
     font-size: 20px;
+}
+
+.front-page .main-content .section-2 {
+    display: flex;
+    margin-top: 60px;
+}
+
+.front-page .main-content .section-2 .section-2-image {
+    width: 90%;
+    height: auto;
+    display: inline-block;
+}
+
+.front-page .main-content .section-2 .section-2-text {
+    margin-right: 3%;
+    display: inline-block;
+}
+
+.front-page .main-content .section-2 .section-2-text > h1 {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    top: 100px;
+    width: 100%;
+    letter-spacing: 1px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.front-page .main-content .section-2 .section-2-text > p {
+    margin-top: 30px;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-size: 20px;
+}
+
+.front-page .main-content .section-2 .section-2-text .section-2-text-author {
+    margin-top: 10px;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.front-page .main-content .section-2 .section-2-text .section-2-text-company {
+    margin-top: 10px;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-size: 17px;
 }
