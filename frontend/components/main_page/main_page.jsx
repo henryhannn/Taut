@@ -1,4 +1,7 @@
 import React from 'react';
+import Header from './header';
+import channelListContainer from './channel_list_container';
+import messageAreaContainer from './message_area_container';
 
 class MainPage extends React.Component {
     constructor(props) {
@@ -8,9 +11,9 @@ class MainPage extends React.Component {
     render() {
         return (
             <div>
-                <button id="logout-button" onClick={this.props.logout}>
-                    Log out
-                </button>
+                <Header logout={this.props.logout}/>
+                <channelListContainer/>
+                <messageAreaContainer/>
             </div>
         )
     }
