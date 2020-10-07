@@ -12,8 +12,8 @@ class MainPage extends React.Component {
         return (
             <div className="main-page">
                 <Header logout={this.props.logout}/>
-                {/* <ChannelListContainer />
-                <MessageAreaContainer /> */}
+                <ChannelListContainer />
+                <MessageAreaContainer />
             </div>
         )
     }
