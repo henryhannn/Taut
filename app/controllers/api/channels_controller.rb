@@ -32,7 +32,7 @@ class Api::ChannelsController < ApplicationController
             @channel = Channel.all.first
             render :show
         else
-            render json: @channel.errors.full_messages, status: 404
+            render json: @channel.errors.full_messages, status: 420
         end
     end
 
