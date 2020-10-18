@@ -15,7 +15,14 @@
 class Channel < ApplicationRecord
     validates :name, :channel_type, presence: true
 
-    has_many :users, through: :memberships
+    has_many :messages,
+        foreign_key: :channel_id,
+        class_name: :Message
 
-    has_many :messages, dependent: :destroy
+    has_many :memberships,
+        foreign_key: :channel_id,
+        class_name: :Membership
+
+    has_many :users,
+        through: :subscriptions
 end
