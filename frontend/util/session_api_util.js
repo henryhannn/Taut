@@ -21,14 +21,14 @@ export const logout = () => (
   })
 );
 
-export const getALLUsers = () => (
+export const fetchAllUsers = () => (
   $.ajax({
     method: 'GET',
     url: '/api/users'
   })
 );
 
-export const getCurrentUser = (userId) => (
+export const fetchCurrentUser = (userId) => (
   $.ajax({
     method: 'GET',
     url: `/api/users/${userId}`

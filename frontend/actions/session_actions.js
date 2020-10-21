@@ -4,6 +4,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SIGNIN_ERRORS = 'RECEIVE_SIGNIN_ERRORS';
 export const CLEAR_SIGNIN_ERRORS = 'CLEAR_SIGNIN_ERRORS';
+export const RECEIVE_USERS = 'RECEIVE_USERS';
 
 export const receiveCurrentUser = currentUser => ({
     type: RECEIVE_CURRENT_USER,
@@ -22,6 +23,18 @@ export const receiveSigninErrors = errors => ({
 export const clearSigninErrors = errors => ({
     type: CLEAR_SIGNIN_ERRORS
 });
+
+export const receiveUsers = (users) => ({
+    type: RECEIVE_USERS,
+    users
+});
+
+export const fetchAllUsers = () => dispatch => (
+    APIUtil.fetchAllUsers()
+        .then((users) => (
+            dispatch(receiveUsers(users))
+        ))
+);
 
 export const signup = user => dispatch => (
     APIUtil.signup(user)

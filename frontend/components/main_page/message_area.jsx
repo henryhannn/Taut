@@ -1,3 +1,5 @@
+// main message area
+
 import React from 'react';
 
 class MessageArea extends React.Component {

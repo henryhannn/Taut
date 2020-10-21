@@ -1,4 +1,4 @@
-export const getMemberships = (channel_id) => (
+export const fetchMemberships = (channel_id) => (
   $.ajax({
     method: 'GET',
     url: `/api/channels/${channel_id}/memberships`
