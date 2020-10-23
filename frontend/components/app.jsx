@@ -11,6 +11,7 @@ const App = () => (
         <Switch>
             <AuthRoute exact path="/signin" component={signinFormContainer} />
             <AuthRoute exact path="/signup" component={signupFormContainer} />
+            <ProtectedRoute exact path="/mainpage/channels/:channelId" component={mainPageContainer} />
             <ProtectedRoute exact path="/mainpage" component={mainPageContainer} />
             <Route exact path="/" component={FrontPageContainer} />
             <Redirect to="/" />

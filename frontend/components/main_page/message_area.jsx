@@ -7,9 +7,18 @@ class MessageArea extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+
+    }
+
+    componentDidUpdate(newProps) {
+
+    }
+
     render() {
         return (
             <div>
+
             </div>
         )
     }

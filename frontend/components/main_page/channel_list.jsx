@@ -32,7 +32,7 @@ class ChannelList extends React.Component {
         return (
             <div>
                 <div className='workspace-box'>
-                    <h1 className='workspace-name'>Red Velvet Land</h1>
+                    <h1 className='workspace-name'>Temp workspace name</h1>
                     <span className='workspace-currentuser'>{this.props.currentUser.full_name}</span>
                 </div>
 
@@ -43,7 +43,7 @@ class ChannelList extends React.Component {
                             <button className='create-channel-icon' onClick={this.onCreateChannel}><i className='fas fa-plus'></i></button>
                         </div>
                         <ul>
-                            {allChannels.map(channelType => <ChannelListLinks key={uniqueId + Math.random()} channel={channelType}/>)}
+                            {allChannels.map(channelType => <ChannelListLinks key={uniqueId + Math.random()} channel={channelType} />)}
                         </ul>
                     </div>
                     <div className='channellist'>
