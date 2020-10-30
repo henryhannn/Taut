@@ -8,6 +8,14 @@ import AboutChannelContainer from './about_channel_container';
 class MessageArea extends React.Component {
     constructor(props) {
         super(props);
+        App.cable.subscriptions.create(
+            {channel: 'MessageChannel'},
+            {
+                received: (data) => {
+                    this.props.receiveMessage(data);
+                }
+            }
+        )
     }
 
     render() {
