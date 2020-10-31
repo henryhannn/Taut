@@ -18,6 +18,17 @@ class MessageArea extends React.Component {
         )
     }
 
+    componentDidMount() {
+        this.props.fetchChannels();
+        this.props.fetchChannel(this.props.channelId);
+        this.props.fetchUsers();
+        this.props.fetchMemberships(this.props.channelId);
+    }
+
+    componentDidUpdate(newProps) {
+
+    }
+
     render() {
         return (
             <div>
