@@ -26,7 +26,11 @@ class MessageArea extends React.Component {
     }
 
     componentDidUpdate(newProps) {
-
+        if (this.props.match.params.channelId !== newProps.match.params.channelId) {
+            this.props.fetchChannel(this.props.match.params.channelId);
+            this.props.fetchUsers;
+            this.props.fetchMemberships(this.props.channelId);
+        };
     }
 
     render() {
