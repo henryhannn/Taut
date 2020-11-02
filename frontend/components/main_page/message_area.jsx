@@ -33,6 +33,16 @@ class MessageArea extends React.Component {
         };
     }
 
+    onNewMember(e) {
+        e.preventDefault();
+        this.props.openModalWithProps('new_member', { channelName: channel.name, channelId: channel.id });
+    }
+
+    openAboutChannel(e) {
+        e.preventDefault;
+        this.props.openAboutChannel();
+    }
+
     render() {
         return (
             <div>
