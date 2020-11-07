@@ -5,7 +5,8 @@ import { createMembership } from '../../actions/membership_actions';
 import { closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => ({
-  currentUser: state.entities.users[state.session.id]
+  currentUser: state.entities.users[state.session.id],
+  members: state.entities.memberships
 })
 
 const mapDispatchToProps = (dispatch) => ({
