@@ -59,8 +59,8 @@ class MessageArea extends React.Component {
                                 <a href="">{channel.name}</a>
                             </div>
                             <ul className='message-area-button'>
-                                <li onclick={this.onNewMember}><i className='fas fa-user-plus'></i></li>
-                                {/* <li onclick={this.openAbout}></li> */}
+                                <li onClick={this.onNewMember}><i className='fas fa-user-plus'></i></li>
+                                {/* <li onClick={this.openAbout}></li> */}
                             </ul>
                         </div>
                         <ul className='message-content'>

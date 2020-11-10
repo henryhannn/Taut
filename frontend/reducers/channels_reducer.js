@@ -4,11 +4,9 @@ const channelsReducer = (state = {}, action) => {
     Object.freeze(state);
     let newState = Object.assign({}, state);
     console.log("channels reducer", action);
-    // debugger;
     switch (action.type) {
         case RECEIVE_CHANNEL:
-            console.log("channels reducer", action.channels);
-            newState[action.channels.id] = action.channels;
+            newState[action.channel.id] = action.channel;
             return newState;
         case RECEIVE_CHANNELS:
             return action.channels;

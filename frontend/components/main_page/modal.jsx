@@ -12,17 +12,17 @@ class Modal extends React.Component {
     if (!modal) {
       return null;
     }
-    let modalTarget;
+    let modalType;
     
     switch (modal) {
       case 'createChannel':
-        modalTarget = <NewChannelFormContainer />;
+        modalType = <NewChannelFormContainer />;
         break;
       case 'createDM':
-        modalTarget = <NewDMFormContainer />;
+        modalType = <NewDMFormContainer />;
         break;
       default:
-        modalTarget = null;
+        modalType = null;
         break;
     }
 
@@ -30,7 +30,7 @@ class Modal extends React.Component {
       <div className='modal-background'>
         <div className='modal-box'>
           <button className='modal-close-button' onClick={this.props.closeModal}>&times;</button>
-          {modalTarget}
+          {modalType}
         </div>
       </div>
     )
