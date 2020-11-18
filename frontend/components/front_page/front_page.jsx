@@ -44,7 +44,7 @@ class FrontPage extends React.Component {
                             <p className="section-2-text-company">Henry Co., CEO, CFO, CTO </p>
                         </div>
                         <div className="section-2-image">
-                            <img src="https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop.png" srcset="https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop.png 1x, https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop@2x.png 2x" alt="Screenshot of the Slack app"></img>
+                            <img src="https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop.png" srcSet="https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop.png 1x, https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop@2x.png 2x" alt="Screenshot of the Slack app"></img>
                         </div>
                     </div>
                 </section>

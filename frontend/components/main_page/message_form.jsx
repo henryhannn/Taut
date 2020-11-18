@@ -39,7 +39,7 @@ class MessageForm extends React.Component {
   render() {
     return (
       <form className='message-form' id='message-form' onSubmit={this.handleSubmit}>
-        <input id=""  value={this.state.body} onChange={this.updateMessage} placeholder={`Message #${this.state.conversation_name}`} required></input>
+        <input id=""  value={this.state.body} onChange={this.updateMessage} placeholder={`Message #${this.state.channel_name}`} required></input>
         <ul className='message-form-button'>
             <button><i className="fa fa-paper-plane" aria-hidden="true"></i></button>
         </ul>

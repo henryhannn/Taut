@@ -1,11 +1,11 @@
 class Api::MessagesController < ApplicationController
   def index
     if params[:channel_id]
-      @messages = Message.where(channel_id: params[:channel_id]).inludes(:user)
+      @messages = Message.where(channel_id: params[:channel_id]).includes(:user)
     end
 
     if @messages
-      render: index
+      render :index
     else
       render json: @messages.errors.full_messages, status: 420
     end

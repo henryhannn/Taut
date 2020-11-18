@@ -14,12 +14,10 @@ const mapStateToProps = (state, ownProps) => ({
     channel: state.entities.channels[ownProps.match.params.channelId],
     channelId: ownProps.match.params.channelId,
     existingMessages: Object.keys(state.entities.messages).map(id => state.entities.messages[id]),
-    // about: state.ui.about,
     memberships: Object.values(state.entities.memberships)
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    // openAbout: () => dispatch(openAbout()),
     fetchChannel: (id) => dispatch(fetchChannel(id)),
     fetchChannels: () => dispatch(fetchChannels()),
     fetchMemberships: (channelId) => dispatch(fetchMemberships(channelId)),

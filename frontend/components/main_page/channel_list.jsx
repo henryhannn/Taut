@@ -30,7 +30,7 @@ class ChannelList extends React.Component {
         const allDMs = this.props.channels.filter(channel => channel.channel_type === 'dm');
 
         return (
-            <div>
+            <div className='channel-list-container'>
                 <div className='workspace-box'>
                     <h1 className='workspace-name'>Temp workspace name</h1>
                     <span className='workspace-currentuser'>{this.props.currentUser.full_name}</span>

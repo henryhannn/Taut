@@ -3,11 +3,9 @@ import { RECEIVE_CHANNELS, RECEIVE_CHANNEL, REMOVE_CHANNEL } from '../actions/ch
 const channelsReducer = (state = {}, action) => {
     Object.freeze(state);
     let newState = Object.assign({}, state);
-    console.log("channels reducer", action);
     switch (action.type) {
         case RECEIVE_CHANNEL:
-            newState[action.channel.id] = action.channel;
-            return newState;
+            return Object.assign({},state, {[action.data.id]: action.data});
         case RECEIVE_CHANNELS:
             return action.channels;
         case REMOVE_CHANNEL:

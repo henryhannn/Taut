@@ -28,9 +28,10 @@ export const fetchChannels = () => dispatch => (
 
 export const fetchChannel = (channelId) => dispatch => (
     APIUtil.fetchChannel(channelId)
-        .then((channel) => (
+        .then((channel) => {
+            console.log("action", channel)
             dispatch(receiveChannel(channel))
-        ))
+        })
 );
 
 export const createChannel = (channel, redirect) => dispatch => (

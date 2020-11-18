@@ -11,9 +11,17 @@ class MainPage extends React.Component {
     render() {
         return (
             <div className="main-page">
-                <Header logout={this.props.logout}/>
-                <ChannelListContainer />
-                <MessageAreaContainer />
+                <div className='main-page-header'>
+                    <Header logout={this.props.logout}/>
+                </div>
+                <div className='main-page-content'>
+                    <div className='main-page-channel-list'>
+                        <ChannelListContainer />
+                    </div>
+                    <div className='main-page-message-area'>
+                        <MessageAreaContainer />
+                    </div>
+                </div>
             </div>
         )
     }

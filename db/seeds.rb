@@ -12,11 +12,7 @@ Channel.delete_all
 Membership.delete_all
 
 demouser = User.create(email: 'DemoUser@Demo.com', full_name: 'Demo', password: 'demouser')
-user1 = User.create(email: 'DemoUser@Demo.com', full_name: 'Demo', password: 'demouser')
-user2 = User.create(email: 'DemoUser@Demo.com', full_name: 'Demo', password: 'demouser')
-user3 = User.create(email: 'DemoUser@Demo.com', full_name: 'Demo', password: 'demouser')
-user4 = User.create(email: 'DemoUser@Demo.com', full_name: 'Demo', password: 'demouser')
-user5 = User.create(email: 'DemoUser@Demo.com', full_name: 'Demo', password: 'demouser')
+user1 = User.create(email: 'henry@henry.com', full_name: 'Henry Han', password: 'henryhan')
 
 channel1 = Channel.create(name: 'general', channel_type: 'group')
 channel2 = Channel.create(name: 'announcements', channel_type: 'group')
@@ -38,3 +34,11 @@ dm4 = Channel.create(name: 'direct4', channel_type: 'direct')
 dm5 = Channel.create(name: 'direct5', channel_type: 'direct')
 dm6 = Channel.create(name: 'direct6', channel_type: 'direct')
 dm7 = Channel.create(name: 'direct7', channel_type: 'direct')
+
+membership1 = Membership.create(user_id: demouser.id, channel_id: channel1.id)
+membership2 = Membership.create(user_id: user1.id, channel_id: channel1.id)
+
+message1 = Message.create(body: 'hello world!', author_id: demouser.id, channel_id: channel1.id)
+message2 = Message.create(body: 'is this working?', author_id: demouser.id, channel_id: channel1.id)
+message3 = Message.create(body: 'hi!', author_id: user1.id, channel_id: channel1.id)
+message4 = Message.create(body: 'hellooooo!', author_id: demouser.id, channel_id: channel1.id)

@@ -13,8 +13,8 @@ const messagesReducer = (state = {}, action) => {
               newState[action.messages[i].id] = action.messages[i];
             }
             return newState;
-        case RECEIVE_CHANNEL:
-            return action.messages;
+        // case RECEIVE_CHANNEL:
+        //     return action.data.messages;
         default:
             return state;
     }

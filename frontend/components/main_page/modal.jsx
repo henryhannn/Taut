@@ -1,6 +1,7 @@
 import React from 'react';
 import NewChannelFormContainer from './new_channel_form_container';
 import NewDMFormContainer from './new_dm_form_container';
+import NewMemberFormContainer from './new_member_form_container';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -20,6 +21,9 @@ class Modal extends React.Component {
         break;
       case 'createDM':
         modalType = <NewDMFormContainer />;
+        break;
+      case 'newMember':
+        modalType = <NewMemberFormContainer channelName={this.props.modal.modalProps.channelName} channelId={this.props.modal.modalProps.channelId} />;
         break;
       default:
         modalType = null;

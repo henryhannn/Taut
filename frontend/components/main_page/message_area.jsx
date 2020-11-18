@@ -56,11 +56,10 @@ class MessageArea extends React.Component {
                     <div className='message-area'>
                         <div className='message-area-header'>
                             <div className='message-area-channel-name'>
-                                <a href="">{channel.name}</a>
+                                {channel.name}
                             </div>
                             <ul className='message-area-button'>
                                 <li onClick={this.onNewMember}><i className='fas fa-user-plus'></i></li>
-                                {/* <li onClick={this.openAbout}></li> */}
                             </ul>
                         </div>
                         <ul className='message-content'>
@@ -69,7 +68,6 @@ class MessageArea extends React.Component {
                         </ul>
                         <MessageForm createMessage={this.props.createMessage} channelId={channel.id} channelName={channel.name} authorId={this.props.currentUser.id}/>
                     </div>
-                    {/* {this.props.about ? <AboutContainer memberships={this.props.memberships} channelId={conversation.id} channelName={channel.name}/> : null} */}
                 </div>
             )
         }

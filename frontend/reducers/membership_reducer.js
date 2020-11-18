@@ -13,9 +13,8 @@ const membershipReducer = (state = {}, action) => {
       nextState = Object.assign({}, state);
       nextState[action.membership.id] = action.membership;
       return nextState;
-    case RECEIVE_CHANNEL:
-      nextState = action.data.memberships;
-      return nextState;
+    // case RECEIVE_CHANNEL:
+    //   return action.data.memberships;
     default:
       return state;
   }
