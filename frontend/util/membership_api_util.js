@@ -1,14 +1,15 @@
 export const fetchMemberships = (channel_id) => (
   $.ajax({
     method: 'GET',
-    url: `/api/channels/${channel_id}/memberships`
+    url: '/api/memberships',
+    data: { channel_id }
   })
 );
 
 export const createMembership = (membership) => (
   $.ajax({
     method: 'POST',
-    url: '/api/memberships/',
-    data: {membership}
+    url: '/api/memberships',
+    data: { membership }
   })
 );

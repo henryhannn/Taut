@@ -1,13 +1,13 @@
 class Api::ChannelsController < ApplicationController
     def index
         @channels = Channel.all
-        render :index
+        render "api/channels/index"
     end
   
     def show
         @channel = Channel.find_by(id: params[:id])
         if @channel
-            render :show
+            render "api/channels/show"
         else
             render json: ['Channel not found'], status: 404
         end
@@ -17,8 +17,8 @@ class Api::ChannelsController < ApplicationController
         @channel = Channel.create!(channel_params)
         @membership = Membership.new(user_id: current_user.id, channel_id: @channel.id)
     
-        if @channel.save && membership.save
-            render :show
+        if @channel.save! && membership.save!
+            render "api/channels/show"
         else
             render json: @channel.errors.full_messages + @membership.errors.full_messages, status: 422
         end

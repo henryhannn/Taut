@@ -9,9 +9,9 @@ export const receiveChannels = (channels) => ({
     channels
 });
 
-export const receiveChannel = (data) => ({
+export const receiveChannel = (channel) => ({
     type: RECEIVE_CHANNEL,
-    data
+    channel
 });
 
 export const removeChannel = (channelId) => ({
@@ -29,7 +29,6 @@ export const fetchChannels = () => dispatch => (
 export const fetchChannel = (channelId) => dispatch => (
     APIUtil.fetchChannel(channelId)
         .then((channel) => {
-            console.log("action", channel)
             dispatch(receiveChannel(channel))
         })
 );

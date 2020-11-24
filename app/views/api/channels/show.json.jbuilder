@@ -1,1 +1,1 @@
-json.extract! @channel, :id, :name, :channel_type
+json.partial! "/api/channels/channel", channel: @channel

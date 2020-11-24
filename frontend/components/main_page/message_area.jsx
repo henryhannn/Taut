@@ -3,28 +3,30 @@
 import React from 'react';
 import MessageContent from './message_content';
 import MessageForm from './message_form';
-import AboutContainer from './about_container';
 
 class MessageArea extends React.Component {
     constructor(props) {
         super(props);
-        App.cable.subscriptions.create(
-            {channel: 'MessageChannel'},
-            {
-                received: (data) => {
-                    this.props.receiveMessage(data);
-                }
-            }
-        )
         this.onNewMember = this.onNewMember.bind(this);
-        this.openAbout = this.openAbout.bind(this);
     }
 
     componentDidMount() {
+        App.cable.subscriptions.create(
+            { channel: "MessageChannel" },
+            {
+                received: data => {
+                    this.props.receiveMessage(data)
+                },
+                speak: function (data) {
+                    return this.perform("speak", data);
+                }
+            }
+        );
         this.props.fetchChannels();
         this.props.fetchChannel(this.props.channelId);
         this.props.fetchUsers();
         this.props.fetchMemberships(this.props.channelId);
+        this.props.fetchMessages(this.props.channelId);
     }
 
     componentDidUpdate(newProps) {

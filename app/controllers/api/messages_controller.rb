@@ -11,23 +11,23 @@ class Api::MessagesController < ApplicationController
     end
   end
 
-  def create
-    @message = Messasge.new(message_params)
-    if @message.save
-      render :show
-      message_data = {
-        id: @message.id,
-        body: @message.body,
-        author_id: @message.author_id,
-        channel_id: @message.channel_id,
-        created_at: @message.created_at,
-        updated_at: @message.updated_at
-      }
-      MessageChannel.broadcast_to('message_channel', message_data)
-    else
-      render json: @message.errors.full_messages, status: 422
-    end
-  end
+  # def create
+  #   @message = Message.new(message_params)
+  #   if @message.save
+  #     render :show
+  #     message_data = {
+  #       id: @message.id,
+  #       body: @message.body,
+  #       author_id: @message.author_id,
+  #       channel_id: @message.channel_id,
+  #       created_at: @message.created_at,
+  #       updated_at: @message.updated_at
+  #     }
+  #     MessageChannel.broadcast_to('message_channel', message_data)
+  #   else
+  #     render json: @message.errors.full_messages, status: 422
+  #   end
+  # end
 
   private
 
