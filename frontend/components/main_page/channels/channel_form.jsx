@@ -4,7 +4,8 @@ class ChannelForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: ""
+      name: '',
+      channel_type: 'group'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }

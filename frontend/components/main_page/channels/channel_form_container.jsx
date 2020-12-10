@@ -5,7 +5,8 @@ import ChannelForm from './channel_form';
 const mapStateToProps = state => {
   return ({
     channel: {
-      name: ''
+      name: '',
+      channel_type: 'group'
     }
   })
 }

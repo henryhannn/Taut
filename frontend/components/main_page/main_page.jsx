@@ -47,7 +47,7 @@ class MainPage extends React.Component {
                         <span className='logout-button-hover-text'>Logout</span>
                     </div>
                 </div>
-                <div className='channel-container'>
+                <div className='channel-list-container'>
                     <ul className='channel-list'>
                         {channels.map((channel) => (
                             <li
