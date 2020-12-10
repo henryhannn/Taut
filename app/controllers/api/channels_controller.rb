@@ -15,9 +15,9 @@ class Api::ChannelsController < ApplicationController
     
     def create
         @channel = Channel.create!(channel_params)
-        @membership = Membership.new(user_id: current_user.id, channel_id: @channel.id)
+        # @membership = Membership.new(user_id: current_user.id, channel_id: @channel.id)
     
-        if @channel.save! && membership.save!
+        if @channel.save! # && membership.save!
             render "api/channels/show"
         else
             render json: @channel.errors.full_messages + @membership.errors.full_messages, status: 422

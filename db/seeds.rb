@@ -27,14 +27,6 @@ channel10 = Channel.create(name: 'red-velvet-team', channel_type: 'group')
 channel11 = Channel.create(name: 'running-out-of-channel-name-ideas1', channel_type: 'group')
 channel12 = Channel.create(name: 'running-out-of-channel-name-ideas2', channel_type: 'group')
 
-dm1 = Channel.create(name: 'direct1', channel_type: 'direct')
-dm2 = Channel.create(name: 'direct2', channel_type: 'direct')
-dm3 = Channel.create(name: 'direct3', channel_type: 'direct')
-dm4 = Channel.create(name: 'direct4', channel_type: 'direct')
-dm5 = Channel.create(name: 'direct5', channel_type: 'direct')
-dm6 = Channel.create(name: 'direct6', channel_type: 'direct')
-dm7 = Channel.create(name: 'direct7', channel_type: 'direct')
-
 membership1 = Membership.create(user_id: demouser.id, channel_id: channel1.id)
 membership2 = Membership.create(user_id: user1.id, channel_id: channel1.id)
 

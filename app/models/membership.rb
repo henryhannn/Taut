@@ -22,4 +22,8 @@ class Membership < ApplicationRecord
   belongs_to :channel,
     foreign_key: :channel_id,
     class_name: :Channel
+
+  def self.find_by_membership(channel_id, user_id)
+    membership = Membership.find_by(channel_id: channel_id, user_id: user_id)
+  end 
 end

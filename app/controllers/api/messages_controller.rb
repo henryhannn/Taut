@@ -1,14 +1,7 @@
 class Api::MessagesController < ApplicationController
   def index
-    if params[:channel_id]
-      @messages = Message.where(channel_id: params[:channel_id]).includes(:user)
-    end
-
-    if @messages
-      render :index
-    else
-      render json: @messages.errors.full_messages, status: 420
-    end
+    @messages = Channel.find_by(id: params[:channel_id]).messages
+    render "api/messages/index"
   end
 
   # def create

@@ -33,11 +33,10 @@ export const fetchChannel = (channelId) => dispatch => (
         })
 );
 
-export const createChannel = (channel, redirect) => dispatch => (
+export const createChannel = (channel) => dispatch => (
     APIUtil.createChannel(channel)
         .then((newChannel) => {
             dispatch(receiveChannel(newChannel));
-            dispatch(() => redirect(newChannel.channel.id))
         })
 );
 
