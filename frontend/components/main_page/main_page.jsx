@@ -52,59 +52,62 @@ class MainPage extends React.Component {
                         <span className='logout-button-hover-text'>Log Out</span>
                     </div>
                 </div>
-                <div className='channel-list-container'>
-                    <ul className='channel-list'>
-                        {channels.map((channel) => (
-                            <li
-                                className={'channel-links'}
-                                key={channel.id}
-                                onClick={() => this.props.history.push(`/channels/${channel.id}`)}
-                            >
-                                # {channel.name}
-                            </li>
-                        ))}
-                        <div className='channel-form-container'>
-                            <li className='channel-form-container-button-text' onClick={this.toggleModal}>
-                                <span className='channel-form-container-button'>+ create a new channel</span>
-                            </li>
+                <div className='channel-2'>
+                    <div className='channel-list-container'>
+                        <ul className='channel-list'>
+                            {channels.map((channel) => (
+                                <li
+                                    className={'channel-links'}
+                                    key={channel.id}
+                                    onClick={() => this.props.history.push(`/channels/${channel.id}`)}
+                                >
+                                    # {channel.name}
+                                </li>
+                            ))}
+                            <div className='channel-form-container'>
+                                <li className='channel-form-container-button-text' onClick={this.toggleModal}>
+                                    <span className='channel-form-container-button'>+ create a new channel</span>
+                                </li>
 
-                            <Modal
-                                className='channel-form-modal'
-                                isOpen={this.state.showModal}
-                                onRequestClose={this.toggleModal}
-                                ariaHideApp={false}
-                                style={{
-                                    content: {
-                                        position: "absolute",
-                                        top: "30%",
-                                        left: "35%",
-                                        overflow: "hidden",
-                                        width: "500px",
-                                        height: "300px",
-                                        background: "rgb(245, 245, 227)",
-                                        padding: "0px",
-                                        outline: "none",
-                                        borderRadius: "15px"
+                                <Modal
+                                    className='channel-form-modal'
+                                    isOpen={this.state.showModal}
+                                    onRequestClose={this.toggleModal}
+                                    ariaHideApp={false}
+                                    style={{
+                                        content: {
+                                            position: "absolute",
+                                            top: "30%",
+                                            left: "35%",
+                                            overflow: "hidden",
+                                            width: "500px",
+                                            height: "300px",
+                                            background: "rgb(245, 245, 227)",
+                                            padding: "0px",
+                                            outline: "none",
+                                            borderRadius: "15px"
 
-                                    },
-                                    overlay: {
-                                        position: 'fixed',
-                                        backgroundColor: 'rgba(0,0,0,0.5)',
-                                        zIndex: '50'
-                                    }
-                                }}
-                            >
-                                <ChannelFormContainer closeModal={this.toggleModal} />
-                            </Modal>
+                                        },
+                                        overlay: {
+                                            position: 'fixed',
+                                            backgroundColor: 'rgba(0,0,0,0.5)',
+                                            zIndex: '50'
+                                        }
+                                    }}
+                                >
+                                    <ChannelFormContainer closeModal={this.toggleModal} />
+                                </Modal>
+                            </div>
+                        </ul>
+                        <div>
+                            <ProtectedRoute path='/channels/:channelId' component={ChannelPageContainer} />
                         </div>
-                    </ul>
-                    <div>
-                        <ProtectedRoute path='/channels/:channelId' component={ChannelPageContainer} />
                     </div>
-                </div>
-                <div className='welcome-message'>
-                    <h1>welcome to taut</h1>
-                    <h2>To start chatting, click on any of the channels on the left or create your own</h2>
+                    <div className='welcome-message'>
+                        <h1>welcome to taut</h1>
+                        <h2>To start chatting, click on any of the channels</h2>
+                        <h2>on the left or create your own</h2>
+                    </div>
                 </div>
             </div>
         )
