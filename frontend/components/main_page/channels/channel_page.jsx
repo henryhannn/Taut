@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { Link } from 'react-router-dom';
 import { ProtectedRoute } from '../../../util/route_util';
 import { useStore } from 'react-redux';
 import MessageFormContainer from '../messages/message_form_container';
@@ -78,76 +79,92 @@ class ChannelPage extends React.Component {
     })
 
     return (
-      <div>
+      <div className='channel'>
         <div className='header'>
-          <h2>Hello {this.props.currentUser.full_name}!</h2>
+          <Link className="frontpage-link" to="/">
+            <ul className="logo-box">
+                <li><img src={window.logo} alt="Taut Logo" className="logo" /></li>
+                <li className="title"> taut</li>
+            </ul>
+          </Link>
           <div className='logout-button-container' onClick={this.logoutUser}>
             <i className='fas fa-sign-out-alt'></i>
-            <span className='logout-button-hover-text'>Logout</span>
+            <span className='logout-button-hover-text'>Log Out</span>
           </div>
         </div>
-        <div className='channel-list-container'>
-          <ul className='channel-list'>
-            {channels.map((channel) => (
-              <li
-                className={'channel-links'}
-                key={channel.id}
-                onClick={() => this.props.history.push(`/channels/${channel.id}`)}
-              >
-                # {channel.name}
-              </li>
-            ))}
-            <div className='channel-form-container'>
-              <li className='channel-form-container-button-text' onClick={this.toggleModal}>
-                <span className='channel-form-container-button'>Create a new channel</span>
-              </li>
+        <div className='channel-2'>
+          <div className='channel-list-container'>
+            <ul className='channel-list'>
+              {channels.map((channel) => (
+                <li
+                  className={'channel-links'}
+                  key={channel.id}
+                  onClick={() => this.props.history.push(`/channels/${channel.id}`)}
+                >
+                  # {channel.name}
+                </li>
+              ))}
+              <div className='channel-form-container'>
+                <li className='channel-form-container-button-text' onClick={this.toggleModal}>
+                  <span className='channel-form-container-button'>+ create a new channel</span>
+                </li>
 
-              <Modal
-                className='channel-form-modal'
-                isOpen={this.state.showModal}
-                onRequestClose={this.toggleModal}
-                ariaHideApp={false}
-                style={{
-                  content: {
-                    position: 'absolute',
-                    top: '20%',
-                    bottom: '20%'
-
-                  },
-                  overlay: {
-                    position: 'fixed',
-                    backgroundColor: 'rgba(0,0,0,0.5)',
-                    zIndex: '50'
-                  }
-                }}
-              >
-                <ChannelFormContainer closeModal={this.toggleModal} />
-              </Modal>
-            </div>
-          </ul>
-          {/* <div>
-            <ProtectedRoute path='/channels/:channelId' component={ChannelPageContainer} />
-          </div> */}
-        </div>
-        <br/>
-        <div className='channel-container'>
-          <h1 className='channel-header'># {channel.name}</h1>
-          <div className='message-area'>
-            <div className='message-header'>
-              <span className='message-header-welcome'>
-                Welcome to #{channel.name}
-              </span>
-              <br/>
-              <span className='message-header-message'>
-                Start chatting about everything related to #{channel.name}
-              </span>
-            </div>
-            {messages}
+                <Modal
+                  className='channel-form-modal'
+                  isOpen={this.state.showModal}
+                  onRequestClose={this.toggleModal}
+                  ariaHideApp={false}
+                  style={{
+                    content: {
+                      position: "absolute",
+                      top: "30%",
+                      left: "35%",
+                      overflow: "hidden",
+                      width: "500px",
+                      height: "300px",
+                      background: "rgb(245, 245, 227)",
+                      padding: "0px",
+                      outline: "none",
+                      borderRadius: "15px"
+                    },
+                    overlay: {
+                      position: 'fixed',
+                      backgroundColor: 'rgba(0,0,0,0.5)',
+                      zIndex: '50'
+                    }
+                  }}
+                >
+                  <ChannelFormContainer closeModal={this.toggleModal} />
+                </Modal>
+              </div>
+            </ul>
+            {/* <div>
+              <ProtectedRoute path='/channels/:channelId' component={ChannelPageContainer} />
+            </div> */}
           </div>
-          <MessageFormContainer
-            className='message-form-container'
-            channel={channel}
-          />
+          <br/>
+          <div className='channel-container'>
+            <div className='message-area'>
+              <div className='message-header'>
+                <span className='message-header-welcome'>
+                  Welcome to #{channel.name}
+                </span>
+                <br/>
+                <span className='message-header-message'>
+                  Start chatting about everything related to #{channel.name}
+                </span>
+              </div>
+              <hr/>
+              {messages}
+            </div>
+            <div className='message-form-box'>
+              <hr/>
+              <MessageFormContainer
+                className='message-form-container'
+                channel={channel}
+              />
+            </div>
+          </div>
         </div>
       </div>
     )

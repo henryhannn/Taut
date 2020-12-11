@@ -1,18 +1,183 @@
-
-
-.main-page-content {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
+.main-page {
+    min-height: 100%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color:  rgb(219, 208, 218);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+                0 2px 2px rgba(0,0,0,0.12), 
+                0 4px 4px rgba(0,0,0,0.12), 
+                0 8px 8px rgba(0,0,0,0.12),
+                0 16px 16px rgba(0,0,0,0.12);
 }
-
-.main-page-channel-list {
-    width: 300px;
-    float: left;
-}
-
-.main-page-message-area {
+  
+.main-page .header {
     display: flex;
     justify-content: space-between;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 2;
+    background-color: #F6EFE8;
+}
+
+.main-page .header li {
+    list-style-type: none;
+}
+
+.main-page .header .logo-box .logo {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+}
+
+.main-page .header .logo-box .title {
+    display: inline-block;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    position: flex;
+    top: 50%;
+    margin-left: 3px;
+}
+
+.main-page .logo-box {
+    display: flex;
+    width: 100px;
+    height: 30px;
+    align-self: center;
+}
+
+.main-page .header .frontpage-link {
+    padding: 25px 40px 25px 15px;
+    display: flex;
     float: right;
+    font-weight: 400;
+    margin-left: 1%;
+    top: 50%;
+}
+
+.main-page .header .logout-button-container {
+    padding: 10px 15px 10px 15px;
+    color: white;
+    background-color: #6f4974;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 4px;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    cursor: pointer;
+}
+
+.main-page .header .logout-button-hover-text {
+    display: flex;
+    align-self: center;
+}
+
+.main-page .channel-2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-page .channel-list-container {
+    width: 30%;
+    min-height: 100%;
+    background-color: rgb(204, 204, 193);
+    background-size: 100%;
+}
+
+.main-page .channel-list-container .channel-list {
+    padding: 8px;
+}
+
+.main-page .channel-list-container .channel-list .channel-links {
+    padding: 5px;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font: 12;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+}
+
+.main-page .channel-list-container .channel-list .channel-links:hover {
+    background-color: rgb(160, 160, 152);
+    transition: .3s;
+}
+
+.main-page .channel-list-container .channel-form-container {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main-page .channel-list-container .channel-form-container:hover {
+    background-color: rgb(160, 160, 152);
+    transition: .3s;
+}
+
+.channel-form .channel-form-top {
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.channel-form .channel-form-top .channel-form-top-header {
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-size: 25px;
+    padding-bottom: 8px;
+    font-weight: 700;
+    color: #701670;
+}
+
+.channel-form .channel-form-top .channel-form-top-message {
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-size: 15px;
+}
+
+.channel-form .channel-form-top .new-channel-form {
+    padding-top: 50px;
+}
+
+.channel-form .channel-form-top .new-channel-form-text {
+    font-size: 12px;
+}
+
+.channel-form .channel-form-top .new-channel-form-input {
+    border-radius: 10px;
+    border: 2px solid #701670;
+    padding-left: 10px;
+    width: 430px;
+    height: 30px;
+}
+
+.channel-form .channel-form-bottom {
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-right: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.channel-form .back-button {
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-weight: 700;
+    color: #701670;
+}
+
+.channel-form .new-channel-form-submit-button {
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    font-weight: 700;
+    color: #701670;
+}
+
+.channel-form .new-channel-form-submit-button:hover {
+    cursor: pointer;
+}
+
+.channel-form .back-button:hover {
+    cursor: pointer;
 }

@@ -1,0 +1,252 @@
+.channel {
+  min-height: 100%;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color:  rgb(219, 208, 218);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+}
+
+.channel .header {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 2;
+  background-color: #F6EFE8;
+}
+
+.channel .header li {
+  list-style-type: none;
+}
+
+.channel .header .logo-box .logo {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+}
+
+.channel .header .logo-box .title {
+  display: inline-block;
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  position: flex;
+  top: 50%;
+  margin-left: 3px;
+}
+
+.channel .logo-box {
+  display: flex;
+  width: 100px;
+  height: 30px;
+  align-self: center;
+}
+
+.channel .header .frontpage-link {
+  padding: 25px 40px 25px 15px;
+  display: flex;
+  float: right;
+  font-weight: 400;
+  margin-left: 1%;
+  top: 50%;
+}
+
+.channel .header .logout-button-container {
+  padding: 10px 15px 10px 15px;
+  color: white;
+  background-color: #6f4974;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 4px;
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  cursor: pointer;
+}
+
+.channel .header .logout-button-hover-text {
+  display: flex;
+  align-self: center;
+}
+
+.channel .channel-2 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.channel .channel-list-container {
+  width: 30%;
+  min-height: 100%;
+  background-color: rgb(204, 204, 193);
+  background-size: 100%;
+}
+
+.channel .channel-list-container .channel-list {
+  padding: 8px;
+}
+
+.channel .channel-list-container .channel-list .channel-links {
+  padding: 5px;
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+  font: 12;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+}
+
+.channel .channel-list-container .channel-list .channel-links:hover {
+  background-color: rgb(160, 160, 152);
+  transition: .3s;
+}
+
+.channel .channel-list-container .channel-form-container {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.channel .channel-list-container .channel-form-container:hover {
+  background-color: rgb(160, 160, 152);
+  transition: .3s;
+}
+
+.channel-form .channel-form-top {
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.channel-form .channel-form-top .channel-form-top-header {
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+  font-size: 25px;
+  padding-bottom: 8px;
+  font-weight: 700;
+  color: #701670;
+}
+
+.channel-form .channel-form-top .channel-form-top-message {
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+  font-size: 15px;
+}
+
+.channel-form .channel-form-top .new-channel-form {
+  padding-top: 50px;
+}
+
+.channel-form .channel-form-top .new-channel-form-text {
+  font-size: 12px;
+}
+
+.channel-form .channel-form-top .new-channel-form-input {
+  border-radius: 10px;
+  border: 2px solid #701670;
+  padding-left: 10px;
+  width: 430px;
+  height: 30px;
+}
+
+.channel-form .channel-form-bottom {
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-right: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.channel-form .back-button {
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+  font-weight: 700;
+  color: #701670;
+}
+
+.channel-form .new-channel-form-submit-button {
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+  font-weight: 700;
+  color: #701670;
+}
+
+.channel-form .new-channel-form-submit-button:hover {
+  cursor: pointer;
+}
+
+.channel-form .back-button:hover {
+  cursor: pointer;
+}
+
+.channel .channel-container {
+  width: 70%;
+  min-height: 100%;
+  padding: 8px;
+}
+
+.channel .message-area {
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 3px;
+}
+
+.channel .message-header {
+  padding-bottom: 10px;
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+}
+
+.channel .message-header-welcome {
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.message {
+  display: flex;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+  
+.message .message-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 10px;
+}
+
+.message .message-author {
+  display: flex;
+  align-items: center;
+}
+
+.message h3 {
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+}
+
+.message p {
+  font-size: 13px;
+  color: rgb(114, 114, 114);
+}
+
+.message .message-body {
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+  font-size: 16px;
+}
+
+.channel .channel-container .message-form-box {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.message-form-input {
+  width: 100%;
+  font-size: 15px;
+  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+}

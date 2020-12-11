@@ -39,12 +39,17 @@ class MainPage extends React.Component {
         const channels = this.props.channels;
 
         return (
-            <div>
+            <div className='main-page'>
                 <div className='header'>
-                    <h2>Hello {this.props.currentUser.full_name}!</h2>
+                    <Link className="frontpage-link" to="/">
+                        <ul className="logo-box">
+                            <li><img src={window.logo} alt="Taut Logo" className="logo" /></li>
+                            <li className="title"> taut</li>
+                        </ul>
+                    </Link>
                     <div className='logout-button-container' onClick={this.logoutUser}>
                         <i className='fas fa-sign-out-alt'></i>
-                        <span className='logout-button-hover-text'>Logout</span>
+                        <span className='logout-button-hover-text'>Log Out</span>
                     </div>
                 </div>
                 <div className='channel-list-container'>
@@ -60,7 +65,7 @@ class MainPage extends React.Component {
                         ))}
                         <div className='channel-form-container'>
                             <li className='channel-form-container-button-text' onClick={this.toggleModal}>
-                                <span className='channel-form-container-button'>Create a new channel</span>
+                                <span className='channel-form-container-button'>+ create a new channel</span>
                             </li>
 
                             <Modal
@@ -70,9 +75,16 @@ class MainPage extends React.Component {
                                 ariaHideApp={false}
                                 style={{
                                     content: {
-                                        position: 'absolute',
-                                        top: '20%',
-                                        bottom: '20%'
+                                        position: "absolute",
+                                        top: "30%",
+                                        left: "35%",
+                                        overflow: "hidden",
+                                        width: "500px",
+                                        height: "300px",
+                                        background: "rgb(245, 245, 227)",
+                                        padding: "0px",
+                                        outline: "none",
+                                        borderRadius: "15px"
 
                                     },
                                     overlay: {
@@ -89,6 +101,10 @@ class MainPage extends React.Component {
                     <div>
                         <ProtectedRoute path='/channels/:channelId' component={ChannelPageContainer} />
                     </div>
+                </div>
+                <div className='welcome-message'>
+                    <h1>welcome to taut</h1>
+                    <h2>To start chatting, click on any of the channels on the left or create your own</h2>
                 </div>
             </div>
         )

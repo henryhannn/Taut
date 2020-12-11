@@ -38,7 +38,7 @@ class FrontPage extends React.Component {
                     </div>
                     <div className="section-2">
                         <div className="section-2-text">
-                            <h1>Over 0 companies use Taut to get work done</h1>
+                            <h1>Over 10 companies use Taut to get work done</h1>
                             <p>"Ideas and media are now able to be shared in near-real time through our social channels, thanks to Taut."</p>
                             <p className="section-2-text-author">Henry</p>
                             <p className="section-2-text-company">Henry Co., CEO, CFO, CTO </p>
