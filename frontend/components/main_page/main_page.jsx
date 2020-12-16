@@ -32,7 +32,7 @@ class MainPage extends React.Component {
     }
 
     logoutUser() {
-        this.props.logoutUser().then(() => this.props.history.push('/login'))
+        this.props.logoutUser().then(() => this.props.history.push('/signin'))
     }
 
     render() {
