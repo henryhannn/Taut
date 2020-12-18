@@ -85,6 +85,10 @@
   height: 100%;
 }
 
+.channel .channel-2 .channel-container {
+  height: 85vh;
+}
+
 .channel .channel-list-container {
   width: 30%;
   height: 85vh;
@@ -94,7 +98,7 @@
 
 .channel .channel-list-container .channel-list {
   padding: 8px;
-  height: 100%;
+  height: 85vh;
 }
 
 .channel .channel-list-container .channel-list .channel-links {
