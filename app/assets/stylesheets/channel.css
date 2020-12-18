@@ -1,5 +1,6 @@
 .channel {
-  min-height: 100%;
+  position: fixed;
+  height: 98vh;
   margin-left: 15%;
   margin-right: 15%;
   background-color:  rgb(219, 208, 218);
