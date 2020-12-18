@@ -94,6 +94,7 @@
 
 .channel .channel-list-container .channel-list {
   padding: 8px;
+  height: 100%;
 }
 
 .channel .channel-list-container .channel-list .channel-links {
