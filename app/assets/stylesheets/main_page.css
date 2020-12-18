@@ -1,8 +1,7 @@
 .main-page {
-    position: fixed;
-    height: 85vh;
+    min-height: 100%;
     margin-left: 15%;
-    width: 70%;
+    margin-right: 15%;
     background-color:  rgb(219, 208, 218);
     box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
                 0 2px 2px rgba(0,0,0,0.12), 
@@ -87,7 +86,7 @@
 
 .main-page .channel-list-container {
     width: 30%;
-    height: 85vh;
+    min-height: 100%;
     background-color: rgb(204, 204, 193);
     background-size: 100%;
 }
