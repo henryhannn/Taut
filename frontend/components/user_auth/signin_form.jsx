@@ -66,7 +66,7 @@ class SigninForm extends React.Component {
                         <div className="signin-form">
                             <li className="email-box">
                                 <input id="email"
-                                    type="text"
+                                    type="email"
                                     placeholder="you@email.com"
                                     value={this.state.email}
                                     onChange={this.update('email')}
