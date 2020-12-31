@@ -29,7 +29,7 @@ class Api::ChannelsController < ApplicationController
         if @channel
             @channel.destroy
             @channel = Channel.all.first
-            render :show
+            render "api/channels/show"
         else
             render json: @channel.errors.full_messages, status: 420
         end
