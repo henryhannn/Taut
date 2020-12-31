@@ -15,7 +15,8 @@ class ChatChannel < ApplicationCable::Channel
       body: message.body, 
       author_id: message.author_id, 
       channel_id: message.channel_id,
-      author: message.author.full_name 
+      author: message.author.full_name,
+      created_at: message.created_at
     }
     ChatChannel.broadcast_to('chat_channel', socket)
   end
