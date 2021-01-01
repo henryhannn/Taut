@@ -17,6 +17,7 @@ class ChannelPage extends React.Component {
     this.toggleModal = this.toggleModal.bind(this);
     this.logoutUser = this.logoutUser.bind(this);
     this.formatDate = this.formatDate.bind(this);
+    this.deleteChannel = this.deleteChannel.bind(this);
   }
 
   componentDidMount() {
@@ -51,7 +52,11 @@ class ChannelPage extends React.Component {
   }
 
   logoutUser() {
-    this.props.logoutUser().this(() => this.props.history.push('/login'))
+    this.props.logoutUser().then(() => this.props.history.push('/signin'))
+  }
+
+  deleteChannel() {
+    this.props.deleteChannel().then(() => this.props.history.push('/mainpage'))
   }
 
   formatDate(date) {
@@ -146,13 +151,18 @@ class ChannelPage extends React.Component {
           <div className='channel-container'>
             <div className='message-area'>
               <div className='message-header'>
-                <span className='message-header-welcome'>
-                  Welcome to #{channel.name}
-                </span>
-                <br/>
-                <span className='message-header-message'>
-                  Start chatting about everything related to #{channel.name}
-                </span>
+                <div className='message-header-part1'>
+                  <span className='message-header-welcome'>
+                    Welcome to #{channel.name}
+                  </span>
+                  <br/>
+                  <span className='message-header-message'>
+                    Start chatting about everything related to #{channel.name}
+                  </span>
+                </div>
+                <div className='message-header-part2'>
+                  <span className='delete-channel-button' onClick={this.deleteChannel}>delete channel</span>
+                </div>
               </div>
               <hr/>
               {messages}

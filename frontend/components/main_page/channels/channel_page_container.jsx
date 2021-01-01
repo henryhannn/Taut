@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { logout } from '../../../actions/session_actions';
-import { fetchChannel, fetchChannels } from '../../../actions/channel_actions';
+import { fetchChannel, fetchChannels, deleteChannel } from '../../../actions/channel_actions';
 import { fetchMessages, receiveMessage } from '../../../actions/message_actions';
 import ChannelPage from './channel_page';
 
@@ -19,7 +19,8 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchMessages: () => dispatch(fetchMessages(ownProps.match.params.channelId)),
   receiveMessage: (message) => dispatch(receiveMessage(message)),
   logoutUser: () => dispatch(logout()),
-  fetchChannels: () => dispatch(fetchChannels())
+  fetchChannels: () => dispatch(fetchChannels()),
+  deleteChannel: () => dispatch(deleteChannel(ownProps.match.params.channelId))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChannelPage)
