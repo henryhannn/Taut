@@ -43,6 +43,6 @@ export const createChannel = (channel) => dispatch => (
 export const deleteChannel = (channelId) => dispatch => (
     APIUtil.deleteChannel(channelId)
         .then((channel) => {
-            dispatch(removeChannel(channel.id))
+            dispatch(removeChannel(channel.id));
         })
 );

@@ -5,6 +5,7 @@ import { ProtectedRoute } from '../../../util/route_util';
 import { useStore } from 'react-redux';
 import MessageFormContainer from '../messages/message_form_container';
 import ChannelFormContainer from './channel_form_container';
+import ChannelDeleteContainer from './channel_delete_container';
 
 class ChannelPage extends React.Component {
   constructor(props) {
@@ -82,7 +83,7 @@ class ChannelPage extends React.Component {
         </li>
       )
     })
-
+    console.log(this.props.location.pathname);
     return (
       <div className='channel'>
         <div className='header'>
@@ -101,11 +102,7 @@ class ChannelPage extends React.Component {
           <div className='channel-list-container'>
             <ul className='channel-list'>
               {channels.map((channel) => (
-                <li
-                  className={'channel-links'}
-                  key={channel.id}
-                  onClick={() => this.props.history.push(`/channels/${channel.id}`)}
-                >
+                <li className={'channel-links'} key={channel.id} onClick={() => this.props.history.push(`/channels/${channel.id}`)}>
                   # {channel.name}
                 </li>
               ))}
@@ -140,6 +137,39 @@ class ChannelPage extends React.Component {
                   }}
                 >
                   <ChannelFormContainer closeModal={this.toggleModal} />
+                </Modal>
+              </div>
+              <div className='channel-delete-container'>
+                <li className='channel-delete-container-button-text' onClick={this.toggleModal}>
+                  <span className='channel-delete-container-button'>- delete a channel</span>
+                </li>
+
+                <Modal
+                  className='channel-delete-modal'
+                  isOpen={this.state.showModal}
+                  onRequestClose={this.toggleModal}
+                  ariaHideApp={false}
+                  style={{
+                    content: {
+                      position: "absolute",
+                      top: "30%",
+                      left: "35%",
+                      overflow: "hidden",
+                      width: "500px",
+                      height: "300px",
+                      background: "rgb(245, 245, 227)",
+                      padding: "0px",
+                      outline: "none",
+                      borderRadius: "15px"
+                    },
+                    overlay: {
+                      position: 'fixed',
+                      backgroundColor: 'rgba(0,0,0,0.5)',
+                      zIndex: '50'
+                    }
+                  }}
+                >
+                  <ChannelDeleteContainer closeModal={this.toggleModal} />
                 </Modal>
               </div>
             </ul>

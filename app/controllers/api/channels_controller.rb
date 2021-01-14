@@ -23,7 +23,7 @@ class Api::ChannelsController < ApplicationController
         end
     end
     
-    def destroy
+    def destroy()#channel_id
         @channel = Channel.find_by(id: params[:id])
 
         if @channel

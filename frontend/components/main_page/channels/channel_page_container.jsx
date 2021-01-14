@@ -3,6 +3,7 @@ import { logout } from '../../../actions/session_actions';
 import { fetchChannel, fetchChannels, deleteChannel } from '../../../actions/channel_actions';
 import { fetchMessages, receiveMessage } from '../../../actions/message_actions';
 import ChannelPage from './channel_page';
+import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
   return ({
