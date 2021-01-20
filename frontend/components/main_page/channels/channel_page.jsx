@@ -10,6 +10,7 @@ import ChannelDeleteContainer from './channel_delete_container';
 class ChannelPage extends React.Component {
   constructor(props) {
     super(props)
+    console.log(props)
     this.state = {
       showModal: false,
       messages: this.props.messages
@@ -83,7 +84,6 @@ class ChannelPage extends React.Component {
         </li>
       )
     })
-    console.log(this.props.location.pathname);
     return (
       <div className='channel'>
         <div className='header'>

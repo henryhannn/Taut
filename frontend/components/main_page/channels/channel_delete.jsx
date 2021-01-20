@@ -3,6 +3,7 @@ import React from 'react';
 class ChannelDelete extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.deleteChannel = this.deleteChannel.bind(this);
   }
 
@@ -11,7 +12,7 @@ class ChannelDelete extends React.Component {
   }
 
   deleteChannel(channelId) {
-    this.props.deleteChannel(channelId).then(() => this.props.closeModal())
+    this.props.deleteChannel(channelId).then(this.props.closeModal)
   }
 
   render() {
@@ -27,10 +28,10 @@ class ChannelDelete extends React.Component {
           <br/>
         </div>
         <div className='channel-delete-list'>
-          {channels.map((channel) => ( channel.id !== this.props.match.params.channelId ?
-              <li className={'channel-list'} key={channel.id} onClick={this.deleteChannel(channel.id)}>
+          {channels.map((channel) => ( 
+              <li className={'channel-list'} key={channel.id} onClick={() => this.deleteChannel(channel.id)}>
                 # {channel.name}
-              </li> : null
+              </li>
           ))}
         </div>
       </div>

@@ -4,7 +4,6 @@ import ChannelDelete from './channel_delete';
 
 const mapStateToProps = (state, ownProps) => {
   return ({
-    channel: state.entities.channels[ownProps.match.params.channelId],
     channels: Object.values(state.entities.channels)
   })
 }
