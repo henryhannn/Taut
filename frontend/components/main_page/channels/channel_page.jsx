@@ -95,7 +95,6 @@ class ChannelPage extends React.Component {
           </Link>
           <div className='logout-button-container' onClick={this.logoutUser}>
             <i className='fas fa-sign-out-alt'></i>
-            <span className='logout-button-hover-text'>Log Out</span>
           </div>
         </div>
         <div className='channel-2'>

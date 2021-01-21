@@ -12,7 +12,7 @@ class ChannelDelete extends React.Component {
   }
 
   deleteChannel(channelId) {
-    this.props.deleteChannel(channelId).then(this.props.closeModal)
+    this.props.deleteChannel(channelId).then(this.props.closeModal);
   }
 
   render() {
