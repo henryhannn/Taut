@@ -59,17 +59,14 @@
 }
 
 .channel .header .logout-button-container {
+  margin-top: 15px;
+  margin-bottom: 17px;
+  margin-right: 10px;
   padding: 10px 15px 10px 15px;
   color: white;
   background-color: #6f4974;
   text-decoration: none;
-  margin: 5px;
   border-radius: 4px;
-  font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 15px;
-  display: flex;
   cursor: pointer;
 }
 
@@ -89,6 +86,7 @@
   min-height: 100%;
   background-color: rgb(204, 204, 193);
   background-size: 100%;
+  position: relative;
 }
 
 .channel .channel-list-container .channel-list {

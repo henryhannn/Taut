@@ -7,7 +7,6 @@
 #  name         :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
-#  owner_id     :integer
 #
 # Indexes
 #
@@ -26,8 +25,4 @@ class Channel < ApplicationRecord
 
     has_many :users,
         through: :subscriptions
-
-    belongs_to :owner,
-        foreign_key: :owner_id,
-        class_name: :User
 end

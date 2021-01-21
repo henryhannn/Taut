@@ -54,6 +54,7 @@ class MainPage extends React.Component {
                 <div className='channel-2'>
                     <div className='channel-list-container'>
                         <ul className='channel-list'>
+                            <li className={'channel-links'} onClick={() => this.props.history.push('/mainpage')}>home</li>
                             {channels.map((channel) => (
                                 <li
                                     className={'channel-links'}
@@ -106,7 +107,15 @@ class MainPage extends React.Component {
                         <h1>welcome to taut</h1>
                         <h2>To start chatting, click on any of the channels</h2>
                         <h2>on the left or create your own</h2>
+                        <br/>
+                        <h2>You may also delete a channel by navigating</h2>
+                        <h2>to a channel and clicking the icon on the right</h2>
                     </div>
+                </div>
+                <div className="social">
+                    <h2>Created by Henry Han</h2>
+                    <a href="https://github.com/henryhannn"><i className="fab fa-github"></i> </a>
+                    <a href="https://www.linkedin.com/in/henryhannn/"><i className="fab fa-linkedin"></i></a>
                 </div>
             </div>
         )

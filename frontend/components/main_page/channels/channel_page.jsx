@@ -5,12 +5,11 @@ import { ProtectedRoute } from '../../../util/route_util';
 import { useStore } from 'react-redux';
 import MessageFormContainer from '../messages/message_form_container';
 import ChannelFormContainer from './channel_form_container';
-import ChannelDeleteContainer from './channel_delete_container';
+// import ChannelDeleteContainer from './channel_delete_container';
 
 class ChannelPage extends React.Component {
   constructor(props) {
     super(props)
-    console.log(props)
     this.state = {
       showModal: false,
       messages: this.props.messages
@@ -100,6 +99,7 @@ class ChannelPage extends React.Component {
         <div className='channel-2'>
           <div className='channel-list-container'>
             <ul className='channel-list'>
+              <li className={'channel-links'} onClick={() => this.props.history.push('/mainpage')}>home</li>
               {channels.map((channel) => (
                 <li className={'channel-links'} key={channel.id} onClick={() => this.props.history.push(`/channels/${channel.id}`)}>
                   # {channel.name}
@@ -138,7 +138,7 @@ class ChannelPage extends React.Component {
                   <ChannelFormContainer closeModal={this.toggleModal} />
                 </Modal>
               </div>
-              <div className='channel-delete-container'>
+              {/* <div className='channel-delete-container'>
                 <li className='channel-delete-container-button-text' onClick={this.toggleModal}>
                   <span className='channel-delete-container-button'>- delete a channel</span>
                 </li>
@@ -170,7 +170,7 @@ class ChannelPage extends React.Component {
                 >
                   <ChannelDeleteContainer closeModal={this.toggleModal} />
                 </Modal>
-              </div>
+              </div> */}
             </ul>
             {/* <div>
               <ProtectedRoute path='/channels/:channelId' component={ChannelPageContainer} />
@@ -205,6 +205,11 @@ class ChannelPage extends React.Component {
             </div>
           </div>
         </div>
+        <div className="social">
+            <h2>Created by Henry Han</h2>
+            <a href="https://github.com/henryhannn"><i className="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/henryhannn/"><i className="fab fa-linkedin"></i></a>
+          </div>
       </div>
     )
   }

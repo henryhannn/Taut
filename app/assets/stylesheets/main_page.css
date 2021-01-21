@@ -1,5 +1,6 @@
 .main-page {
-    min-height: 100%;
+    min-height: 70%;
+    min-width: 70%;
     margin-left: 15%;
     margin-right: 15%;
     background-color:  rgb(219, 208, 218);
@@ -8,6 +9,7 @@
                 0 4px 4px rgba(0,0,0,0.12), 
                 0 8px 8px rgba(0,0,0,0.12),
                 0 16px 16px rgba(0,0,0,0.12);
+    position: absolute;
 }
   
 .main-page .header {
@@ -59,17 +61,14 @@
 }
 
 .main-page .header .logout-button-container {
+    margin-top: 15px;
+    margin-bottom: 17px;
+    margin-right: 10px;
     padding: 10px 15px 10px 15px;
     color: white;
     background-color: #6f4974;
     text-decoration: none;
-    margin: 5px;
     border-radius: 4px;
-    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 15px;
-    display: flex;
     cursor: pointer;
 }
 
@@ -79,20 +78,21 @@
 }
 
 .main-page .channel-2 {
-    display: flex;
+    display: inline-block;
     width: 100%;
-    height: 100%;
 }
 
-.main-page .channel-list-container {
+.main-page .channel-2 .channel-list-container {
     width: 30%;
-    min-height: 100%;
+    height: 77vh;
     background-color: rgb(204, 204, 193);
-    background-size: 100%;
+    float: left;
 }
 
 .main-page .channel-list-container .channel-list {
     padding: 8px;
+    overflow-y: auto;
+    height: 98%;
 }
 
 .main-page .channel-list-container .channel-list .channel-links {
@@ -184,13 +184,13 @@
 
 .main-page .welcome-message {
     width: 70%;
-    min-height: 100%;
-    padding: 30px;
+    height: 77vh;
     text-align: center;
+    float: right;
 }
 
 .main-page .welcome-message h1 {
-    padding-top: 55px;
+    padding-top: 125px;
     padding-bottom: 20px;
     font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
     font-size: 35px;
@@ -201,4 +201,16 @@
 .main-page .welcome-message h2 {
     font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
     font-size: 20px;
+}
+
+.main-page .social {
+    background-color: #F6EFE8;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+}
+
+.main-page .social h2 {
+    font-size: 15px;
 }
