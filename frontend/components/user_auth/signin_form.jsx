@@ -90,6 +90,13 @@ class SigninForm extends React.Component {
                     </form>
                     <form>
                         <div>
+                            <li className="signup-button">
+                                <button onClick={() => this.props.history.push('/signup')}>Create a new account</button>
+                            </li>
+                        </div>
+                    </form>
+                    <form>
+                        <div>
                             <li className="demouser">
                                 <button onClick={this.handleDemo}>Demo user</button>
                             </li>

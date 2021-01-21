@@ -210,10 +210,10 @@ class ChannelPage extends React.Component {
           </div>
         </div>
         <div className="social">
-            <h2>Created by Henry Han</h2>
-            <a href="https://github.com/henryhannn"><i className="fab fa-github"></i> </a>
-            <a href="https://www.linkedin.com/in/henryhannn/"><i className="fab fa-linkedin"></i></a>
-          </div>
+          <h2>Created by Henry Han</h2>
+          <a href="https://github.com/henryhannn" target='_blank'><i className="fab fa-github"></i> </a>
+          <a href="https://www.linkedin.com/in/henryhannn/" target='_blank'><i className="fab fa-linkedin"></i></a>
+        </div>
       </div>
     )
   }

@@ -3,7 +3,7 @@ import FrontPage from './front_page';
 import { logout } from '../../actions/session_actions'
 
 const mapStateToProps = (state) => ({
-    currentUser: state.entities.users[state.session.currentUserId]
+    currentUser: state.entities.users[state.session.id]
 });
 
 const mapDispatchToProps = (dispatch) => ({

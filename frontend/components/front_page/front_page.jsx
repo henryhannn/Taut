@@ -16,6 +16,17 @@ class FrontPage extends React.Component {
                             <li className="title"> taut</li>
                         </ul>
                     </Link>
+                    {this.props.currentUser
+                    ?
+                    <ul className="links">
+                        <ul className="hello-message">
+                            <span>Hello {this.props.currentUser.email}</span>
+                        </ul>
+                        <ul className="mainpage-link">
+                            <li><Link to="/mainpage">Continue Chatting</Link></li>
+                        </ul>
+                    </ul>
+                    :
                     <ul className="links">
                         <ul className="signin-link">
                             <li><Link to="/signin">Sign In</Link></li>
@@ -23,7 +34,7 @@ class FrontPage extends React.Component {
                         <ul className="signup-link">
                             <li><Link to="/signup">Get Started</Link></li>
                         </ul>
-                    </ul>
+                    </ul>}
                 </ul>
                 <section className="main-content">
                     <h1>Taut is where work happens</h1>
@@ -46,6 +57,10 @@ class FrontPage extends React.Component {
                         <div className="section-2-image">
                             <img src="https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop.png" srcSet="https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop.png 1x, https://a.slack-edge.com/a084c/marketing/img/downloads/screenshots/windows/windows-hero-desktop@2x.png 2x" alt="Screenshot of the Slack app"></img>
                         </div>
+                    </div>
+                    <div className="frontpage-social">
+                        <a href="https://github.com/henryhannn" target='_blank'><i className="fab fa-github"></i> Github     </a>
+                        <a href="https://www.linkedin.com/in/henryhannn/" target='_blank'><i className="fab fa-linkedin"></i> LinkedIn</a>
                     </div>
                 </section>
             </div>
