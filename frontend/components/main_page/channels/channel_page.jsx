@@ -190,11 +190,15 @@ class ChannelPage extends React.Component {
                   </span>
                 </div>
                 <div className='message-header-part2'>
-                  <span className='delete-channel-button' onClick={this.deleteChannel}>delete channel</span>
+                  <div className='message-header-delete'>
+                    <span className='delete-channel-button' onClick={this.deleteChannel}><i className="far fa-trash-alt"></i></span>
+                  </div>
                 </div>
               </div>
               <hr/>
-              {messages}
+              <div className='message-box'>
+                {messages}
+              </div>
             </div>
             <div className='message-form-box'>
               <hr/>
@@ -207,7 +211,7 @@ class ChannelPage extends React.Component {
         </div>
         <div className="social">
             <h2>Created by Henry Han</h2>
-            <a href="https://github.com/henryhannn"><i className="fab fa-github"></i></a>
+            <a href="https://github.com/henryhannn"><i className="fab fa-github"></i> </a>
             <a href="https://www.linkedin.com/in/henryhannn/"><i className="fab fa-linkedin"></i></a>
           </div>
       </div>

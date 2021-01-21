@@ -185,8 +185,8 @@
 .main-page .welcome-message {
     width: 70%;
     height: 77vh;
-    text-align: center;
     float: right;
+    text-align: center;
 }
 
 .main-page .welcome-message h1 {
