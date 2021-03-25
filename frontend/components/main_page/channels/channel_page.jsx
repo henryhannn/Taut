@@ -5,7 +5,6 @@ import { ProtectedRoute } from '../../../util/route_util';
 import { useStore } from 'react-redux';
 import MessageFormContainer from '../messages/message_form_container';
 import ChannelFormContainer from './channel_form_container';
-// import ChannelDeleteContainer from './channel_delete_container';
 
 class ChannelPage extends React.Component {
   constructor(props) {
